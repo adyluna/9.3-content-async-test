@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 const fetchCharacter = async (id) => {
   // Recebemos como parâmetro o id
   try {
@@ -15,16 +17,6 @@ const fetchCharacter = async (id) => {
     return error;
   }
 };
-
-// const fetchCharacter = async (id) => {
-//   const URL = `https://www.superheroapi.com/api.php/4192484924171229/${id}`;
-//   const promise = fetch(URL)
-//     .then((response) => response.json())
-//     .then((result) => result)
-//     .catch((error) => error);
-
-//     return promise;
-// };
 
 module.exports = {
   fetchCharacter,
